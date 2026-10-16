@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#e9e5df" />
-  <meta name="description" content="Personalized stories, faith-based writings, and inspirational pieces crafted around your request." />
-  <title>Seed Garden Writings — Personalized Writing</title>
+  <meta name="description" content="Explore the Wallora wallpaper collections: Samurai’s Horizon, Sunset Reflections, and Mediterranean Serenity." />
+  <title>Wallora — Wallpaper Collections</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -14,21 +14,18 @@
 <body>
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Seed Garden Writings home">
-        <span class="brand-mark">🌱</span>
+      <a class="brand" href="index.html" aria-label="Wallora home">
+        <span class="brand-mark">◈</span>
         <span>
-          <strong>Seed Garden Writings</strong>
-          <small>Personalized Writings</small>
+          <strong>Wallora</strong>
+          <small>Wallpaper Collections</small>
         </span>
       </a>
-      <button class="admin-button" id="admin-open" type="button" aria-label="Open admin portal" aria-haspopup="dialog" aria-controls="admin-portal">
-        <span aria-hidden="true">⚙</span>
-      </button>
     </header>
 
     <nav class="mobile-section-nav" aria-label="Browse page sections">
       <button class="mobile-section-button active" type="button" data-panel="reviews" aria-pressed="true">Reviews</button>
-      <button class="mobile-section-button" type="button" data-panel="writing" aria-pressed="false">Library</button>
+      <button class="mobile-section-button" type="button" data-panel="writing" aria-pressed="false">Collections</button>
       <button class="mobile-section-button" type="button" data-panel="order" aria-pressed="false">Order</button>
     </nav>
 
@@ -36,9 +33,9 @@
       <!-- LEFT: REVIEWS -->
       <section class="panel reviews-panel" id="reviews" aria-labelledby="reviews-title">
         <div class="panel-top">
-          <span class="eyebrow">Words from readers</span>
-          <h1 id="reviews-title">Customer Reviews</h1>
-          <p>Personal moments, turned into writing people can keep.</p>
+          <span class="eyebrow">Spaces inspired by our designs</span>
+          <h1 id="reviews-title">Wallpaper Reviews</h1>
+          <p>See what customers think of their new favorite backdrops.</p>
         </div>
 
         <div class="rating-summary" aria-label="Average rating 4.76 out of 5">
@@ -46,7 +43,7 @@
             <strong id="review-average">4.76</strong>
             <span class="stars">★★★★★</span>
           </div>
-          <small id="review-count">Based on 185 unique reader reviews</small>
+          <small id="review-count">Customer feedback</small>
         </div>
 
         <div class="review-list" id="review-list"></div>
@@ -54,16 +51,16 @@
 
         <div class="review-footer">
           <span class="trust-dot"></span>
-          <span>Written with care • Delivered digitally</span>
+          <span>Designed with care • Digital downloads</span>
         </div>
       </section>
 
-      <!-- MIDDLE: BOOK LIBRARY -->
+      <!-- MIDDLE: WALLPAPER COLLECTIONS -->
       <section class="panel library-panel" id="writing" aria-labelledby="library-title">
         <div class="library-header">
-          <span class="eyebrow">The Seed Garden Writings library</span>
-          <h2 id="library-title">Stories to keep</h2>
-          <p>Explore 21 original works. Tap a cover to read the short story on its back.</p>
+          <span class="eyebrow">The Wallora collection</span>
+          <h2 id="library-title">Wallpaper Collections</h2>
+          <p>Explore nine distinctive wallpaper collections.</p>
         </div>
         <div class="library-catalog" id="library-catalog"></div>
       </section>
@@ -71,170 +68,59 @@
       <!-- RIGHT: ORDER / PAYMENT -->
       <section class="panel checkout-panel" id="order" aria-labelledby="checkout-title">
         <div class="checkout-header">
-          <span class="eyebrow">Personal request form</span>
-          <h2 id="checkout-title">Start Your Order</h2>
-          <p>Choose your story, share the details, and submit your request.</p>
+          <span class="eyebrow">Select Your Wallpaper Bundle</span>
+          <h2 id="checkout-title">Select Your Wallpaper Bundle</h2>
         </div>
-        <form id="payment-form" novalidate>
+        <div id="payment-form">
           <fieldset class="choice-section">
-            <legend>Type of Story</legend>
-            <div class="type-options" role="group" aria-label="Type of story">
-              <button class="choice-button type-choice active" type="button" data-value="Personal Request" aria-pressed="true">Personal Request</button>
-              <button class="choice-button type-choice" type="button" data-value="Faith Based (Prayer / Inspiration)" aria-pressed="false">Faith Based <small>Prayer / Inspiration</small></button>
-              <button class="choice-button type-choice" type="button" data-value="Motivational" aria-pressed="false">Motivational</button>
-              <button class="choice-button type-choice" type="button" data-value="Surprise Me" aria-pressed="false">Surprise Me</button>
+            <legend>Wallpaper Bundle Collections</legend>
+            <div class="type-options" role="group" aria-label="Wallpaper bundle collections">
+              <button class="choice-button type-choice active" type="button" data-value="Samurai’s Horizon" aria-pressed="true">Samurai’s Horizon</button>
+              <button class="choice-button type-choice" type="button" data-value="Sunset Reflections" aria-pressed="false">Sunset Reflections</button>
+              <button class="choice-button type-choice" type="button" data-value="Mediterranean Serenity" aria-pressed="false">Mediterranean Serenity</button>
+              <button class="choice-button type-choice" type="button" data-value="Crossgray River Landscape" aria-pressed="false">Crossgray River Landscape</button>
+              <button class="choice-button type-choice" type="button" data-value="Cyber Fiction" aria-pressed="false">Cyber Fiction</button>
+              <button class="choice-button type-choice" type="button" data-value="Indian Heritage Sunset" aria-pressed="false">Indian Heritage Sunset</button>
+              <button class="choice-button type-choice" type="button" data-value="Japanese Landscape" aria-pressed="false">Japanese Landscape</button>
+              <button class="choice-button type-choice" type="button" data-value="Kashmiri Twilight" aria-pressed="false">Kashmiri Twilight</button>
+              <button class="choice-button type-choice" type="button" data-value="Serene Lake" aria-pressed="false">Serene Lake</button>
+              <button class="choice-button type-choice" type="button" data-value="China Heritage" aria-pressed="false">China Heritage</button>
+              <button class="choice-button type-choice" type="button" data-value="Japan Heritage" aria-pressed="false">Japan Heritage</button>
+              <button class="choice-button type-choice" type="button" data-value="Turkey Heritage" aria-pressed="false">Turkey Heritage</button>
             </div>
-            <input id="story-type" name="storyType" type="hidden" value="Personal Request" />
+            <input id="story-type" name="storyType" type="hidden" value="Samurai’s Horizon" />
           </fieldset>
 
-          <fieldset class="choice-section">
-            <legend>Pages</legend>
-            <div class="page-options" role="group" aria-label="Number of pages">
-              <button class="choice-button page-choice active" type="button" data-value="1–3 pages (Short)" aria-pressed="true"><strong>1–3</strong><small>Short</small></button>
-              <button class="choice-button page-choice" type="button" data-value="3–5 pages (Medium)" aria-pressed="false"><strong>3–5</strong><small>Medium</small></button>
-              <button class="choice-button page-choice" type="button" data-value="Custom" aria-pressed="false"><strong>Custom</strong><small>Enter pages</small></button>
-            </div>
-            <div class="custom-pages-wrap" id="custom-pages-wrap" hidden>
-              <label for="custom-pages">Custom page count</label>
-              <input id="custom-pages" name="customPages" type="number" min="1" max="100" placeholder="e.g. 8" />
-            </div>
-            <input id="page-length" name="pageLength" type="hidden" value="1–3 pages (Short)" />
-            <small class="error" data-error-for="pages"></small>
-          </fieldset>
-
-          <div class="field-group">
-            <label for="name">Name</label>
-            <div class="input-wrap">
-              <span aria-hidden="true">👤</span>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
-            </div>
-            <small class="error" data-error-for="name"></small>
-          </div>
-
-          <div class="field-group">
-            <label for="email">Email</label>
-            <div class="input-wrap">
-              <span aria-hidden="true">✉</span>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
-            </div>
-            <small class="error" data-error-for="email"></small>
-          </div>
-
-          <div class="field-group">
-            <label for="request">Your request</label>
-            <textarea id="request" name="request" rows="5" placeholder="Tell us who it is for, the tone, important moments, and anything you would like included..." required></textarea>
-            <small class="error" data-error-for="request"></small>
-          </div>
-
-          <fieldset class="choice-section amount-section">
-            <legend>Choose your seeds</legend>
-            <div class="amount-options" role="group" aria-label="Amount">
-              <button class="choice-button amount-choice" type="button" data-value="7" data-seeds="1" aria-pressed="false"><strong>1 Seed</strong><small>$7</small></button>
-              <button class="choice-button amount-choice active" type="button" data-value="14" data-seeds="2" aria-pressed="true"><strong>2 Seeds</strong><small>$14</small></button>
-              <button class="choice-button amount-choice" type="button" data-value="21" data-seeds="3" aria-pressed="false"><strong>3 Seeds</strong><small>$21</small></button>
-            </div>
-            <input id="amount" name="amount" type="hidden" value="14" />
-            <input id="seed-count" name="seedCount" type="hidden" value="2" />
-          </fieldset>
-
-          <button class="pay-button" type="submit">
-            <span>Get Your Personalised Story</span>
+          <a class="pay-button" href="https://buymeacoffee.com/wallora" target="_blank" rel="noopener noreferrer">
+            <span>Support me and Get Your Wallaper From My shop</span>
             <span aria-hidden="true">→</span>
-          </button>
-          <p class="secure-note">Seed is Transaction one Seed Account for One Personal Custom Writing</p>
-          <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
-        </form>
-
-        <div class="checkout-footer">
-          <div><span>✓</span> Original writing</div>
-          <div><span>✓</span> Private request</div>
-          <div><span>✓</span> Digital delivery</div>
+          </a>
         </div>
+
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>© <span id="year"></span> Seed Garden Writings</span>
+      <span>© <span id="year"></span> Wallora</span>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="about.html">About Us</a>
-        <a href="terms.html">Terms &amp; Conditions</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="delivery-fulfillment-policy.html">Delivery &amp; Fulfillment</a>
       </nav>
-      <span class="footer-tagline">Stories • Faith • Inspiration</span>
+      <span class="footer-tagline">Wallpapers • Style • Atmosphere</span>
     </footer>
   </div>
 
-  <div class="admin-portal" id="admin-portal" hidden>
-    <button class="admin-backdrop" type="button" data-admin-close aria-label="Close admin portal"></button>
-    <section class="admin-dialog" role="dialog" aria-modal="true" aria-labelledby="admin-title">
-      <button class="admin-close" type="button" data-admin-close aria-label="Close admin portal">×</button>
+  <dialog class="wallpaper-dialog" id="wallpaper-dialog" aria-labelledby="wallpaper-dialog-title">
+    <button class="wallpaper-dialog-close" type="button" aria-label="Close wallpaper preview">×</button>
+    <img class="wallpaper-dialog-image" src="" alt="" />
+    <div class="wallpaper-dialog-details">
+      <span class="eyebrow">Wallpaper preview</span>
+      <h2 class="wallpaper-dialog-title" id="wallpaper-dialog-title"></h2>
+      <label for="wallpaper-email">Email</label>
+      <input id="wallpaper-email" type="email" autocomplete="email" placeholder="you@example.com" required />
+      <button class="pay-button wallpaper-get-button" type="button"><span>Get</span><span aria-hidden="true">→</span></button>
+    </div>
+  </dialog>
 
-      <div class="admin-login" id="admin-login">
-        <div class="admin-icon" aria-hidden="true">🔐</div>
-        <span class="eyebrow">Private access</span>
-        <h2 id="admin-title">Admin Portal</h2>
-        <p>Sign in securely to review and manage incoming orders.</p>
-        <form id="admin-login-form" novalidate>
-          <label for="admin-email">Email</label>
-          <input id="admin-email" type="email" autocomplete="username" required />
-          <label for="admin-password">Password</label>
-          <input id="admin-password" type="password" autocomplete="current-password" required />
-          <button class="admin-login-button" type="submit">Open dashboard</button>
-          <p class="admin-login-error" id="admin-login-error" role="alert"></p>
-        </form>
-      </div>
-
-      <div class="admin-dashboard" id="admin-dashboard" hidden>
-        <div class="admin-dashboard-head">
-          <div>
-            <span class="eyebrow">Seed Garden Writings admin</span>
-            <h2>Orders</h2>
-          </div>
-          <button class="admin-signout" id="admin-signout" type="button">Sign out</button>
-        </div>
-
-        <div class="admin-layout">
-          <aside class="calendar-card" aria-label="Order calendar">
-            <div class="calendar-toolbar">
-              <button id="calendar-prev" type="button" aria-label="Previous month">‹</button>
-              <strong id="calendar-title"></strong>
-              <button id="calendar-next" type="button" aria-label="Next month">›</button>
-            </div>
-            <div class="calendar-weekdays" aria-hidden="true">
-              <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
-            </div>
-            <div class="calendar-grid" id="calendar-grid"></div>
-            <button class="calendar-clear" id="calendar-clear" type="button" hidden>Show all orders</button>
-          </aside>
-
-          <div class="orders-column">
-            <div class="orders-summary">
-              <div><strong id="order-count">0</strong><span>Total orders</span></div>
-              <div><strong id="pending-count">0</strong><span>Pending</span></div>
-              <div><strong id="fulfilled-count">0</strong><span>Fulfilled</span></div>
-            </div>
-            <p class="orders-filter" id="orders-filter">Showing all orders</p>
-            <div class="orders-list" id="orders-list"></div>
-          </div>
-        </div>
-      </div>
-
-      <section class="order-report" id="order-report" aria-labelledby="order-report-title" hidden>
-        <div class="order-report-toolbar">
-          <button class="report-back-button" id="order-report-back" type="button">← Back to orders</button>
-          <div class="order-report-actions">
-            <button class="report-print-button" id="order-report-print" type="button">Print / Save PDF</button>
-            <button class="fulfill-button report-fulfill-button" id="order-report-fulfill" type="button">Mark as fulfilled</button>
-          </div>
-        </div>
-        <article class="order-report-sheet" id="order-report-content"></article>
-      </section>
-    </section>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase-config.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

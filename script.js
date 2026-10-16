@@ -1,3 +1,91 @@
+const WALLPAPER_COLLECTIONS = [
+  {
+    title: "Samurai’s Horizon",
+    description: "A cinematic Japanese inspired scene for a bold, focused screen.",
+    image: "assets/wallpapers/samurais-horizon/samurais-horizon-wallpaper-art.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/samurais-horizon/samurais-horizon-wide-monitor.webp", "assets/wallpapers/samurais-horizon/samurais-horizon-mac.png", "assets/wallpapers/samurais-horizon/samurais-horizon-iphone.webp"]
+  },
+  {
+    title: "Sunset Reflections",
+    description: "Warm sunset tones and calm reflections to bring a little stillness to your screen.",
+    image: "assets/wallpapers/sunset-reflections/sunset-reflections-cover.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/sunset-reflections/sunset-reflections-wide-monitor.png", "assets/wallpapers/sunset-reflections/sunset-reflections-mac.png", "assets/wallpapers/sunset-reflections/sunset-reflections-iphone.png"]
+  },
+  {
+    title: "Mediterranean Serenity",
+    description: "A sunlit coastal mood inspired by the relaxed beauty of the Mediterranean.",
+    image: "assets/wallpapers/mediterranean-serenity/mediterranean-sunset-wallpaper-collection.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/mediterranean-serenity/mediterranean-serenity-wide-monitor.png", "assets/wallpapers/mediterranean-serenity/mediterranean-serenity-mac.png", "assets/wallpapers/mediterranean-serenity/mediterranean-serenity-iphone.png"]
+  },
+  {
+    title: "Crossgray River Landscape",
+    description: "A quiet monochrome river scene with soft mountain layers and a striking eclipse.",
+    image: "assets/wallpapers/new-collections/crossgray-river-landscape.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/crossgray-river-landscape.png", "assets/wallpapers/new-collections/crossgray-river-landscape.png", "assets/wallpapers/new-collections/crossgray-river-landscape.png"]
+  },
+  {
+    title: "Cyber Fiction",
+    description: "A neon-lit futuristic skyline beneath a vivid evening moon.",
+    image: "assets/wallpapers/new-collections/cyber-fiction.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/cyber-fiction.png", "assets/wallpapers/new-collections/cyber-fiction.png", "assets/wallpapers/new-collections/cyber-fiction.png"]
+  },
+  {
+    title: "Indian Heritage Sunset",
+    description: "A glowing riverside sunset framed by historic Indian architecture.",
+    image: "assets/wallpapers/new-collections/indian-heritage-sunset.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/indian-heritage-sunset.png", "assets/wallpapers/new-collections/indian-heritage-sunset.png", "assets/wallpapers/new-collections/indian-heritage-sunset.png"]
+  },
+  {
+    title: "Japanese Landscape",
+    description: "A minimalist Japanese seascape with a vermilion sun and winding path.",
+    image: "assets/wallpapers/new-collections/japanese-landscape.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/japanese-landscape.png", "assets/wallpapers/new-collections/japanese-landscape.png", "assets/wallpapers/new-collections/japanese-landscape.png"]
+  },
+  {
+    title: "Kashmiri Twilight",
+    description: "Mountain peaks, a crescent moon, and houseboats at blue hour in Kashmir.",
+    image: "assets/wallpapers/new-collections/kashmiri-twilight.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/kashmiri-twilight.png", "assets/wallpapers/new-collections/kashmiri-twilight.png", "assets/wallpapers/new-collections/kashmiri-twilight.png"]
+  },
+  {
+    title: "Serene Lake",
+    description: "A peaceful alpine lake and sunlit mountains in cool blue tones.",
+    image: "assets/wallpapers/new-collections/serene-lake.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/serene-lake.png", "assets/wallpapers/new-collections/serene-lake.png", "assets/wallpapers/new-collections/serene-lake.png"]
+  },
+  {
+    title: "China Heritage",
+    description: "A lantern-lit pagoda and mountain river beneath cherry blossoms at sunset.",
+    image: "assets/wallpapers/new-collections/china-heritage.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/china-heritage.png", "assets/wallpapers/new-collections/china-heritage.png", "assets/wallpapers/new-collections/china-heritage.png"]
+  },
+  {
+    title: "Japan Heritage",
+    description: "A tranquil traditional pavilion overlooking a glowing modern city at dusk.",
+    image: "assets/wallpapers/new-collections/japan-heritage.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/japan-heritage.png", "assets/wallpapers/new-collections/japan-heritage.png", "assets/wallpapers/new-collections/japan-heritage.png"]
+  },
+  {
+    title: "Turkey Heritage",
+    description: "A warm twilight over a waterfront mosque, framed by palms and glowing lanterns.",
+    image: "assets/wallpapers/new-collections/turkey-heritage.png",
+    variants: ["Wide Monitor", "Mac", "iPhone"],
+    files: ["assets/wallpapers/new-collections/turkey-heritage.png", "assets/wallpapers/new-collections/turkey-heritage.png", "assets/wallpapers/new-collections/turkey-heritage.png"]
+  }
+];
+
+/* Legacy writing catalog retained for now; the public middle column uses the wallpaper collections below. */
 const BOOKS = [
   {
     category: "Stories",
@@ -236,42 +324,37 @@ const AMERICAN_LAST_NAMES = [
 ];
 
 const REVIEW_OPENINGS = [
-  "The story captured our family memory with warmth and an honest, natural voice.",
-  "I was surprised by how personal and carefully observed the final writing felt.",
-  "Every detail I shared found a meaningful place without making the piece feel crowded.",
-  "The words were gentle, vivid, and much closer to my own feelings than I expected.",
-  "This turned a difficult memory into something thoughtful that I can keep and revisit.",
-  "The finished piece sounded sincere and specific rather than like a standard template.",
-  "I loved the quiet details and the way the ending brought the whole story together.",
-  "The writing gave shape to something I had struggled to express for a long time.",
-  "It arrived with exactly the reflective tone I requested and felt beautifully balanced.",
-  "The story was clear, moving, and full of small touches that made it unmistakably ours.",
-  "I appreciated how respectfully the writer handled every name, memory, and emotion.",
-  "The final story held onto the heart of my request while adding details I had not considered.",
-  "From the opening line onward, the writing felt attentive, warm, and thoughtfully composed.",
-  "What began as a few notes became a complete piece with a strong sense of place and feeling.",
-  "The language was simple in the best way, allowing the important moments to stand out clearly."
+  "The wallpaper looks crisp on my screen and gives the whole setup a calmer feel.",
+  "The colors are even richer in person, and the image fits my display beautifully.",
+  "I love how the design adds character without making my desktop feel busy.",
+  "The details are sharp, and the composition leaves plenty of room for my icons.",
+  "The scene brings a peaceful atmosphere to my workspace every time I open my laptop.",
+  "The download was easy to set up and looks great on my monitor.",
+  "The colors feel balanced, and the image looks polished as my everyday background.",
+  "I wanted something distinctive for my screen, and this collection was a lovely fit.",
+  "The wallpaper looks beautiful on my phone and stays clear on the lock screen.",
+  "A thoughtful design with lovely detail; it has quickly become my favorite background.",
+  "The artwork feels immersive without distracting me while I work.",
+  "The landscape gives my screen a fresh look and makes the space feel more personal.",
+  "I appreciate the different device sizes; setting it up on my devices was simple.",
+  "The image quality is excellent and the colors look natural on my display.",
+  "A beautiful backdrop that makes my home screen feel clean and inviting."
 ];
 
 const REVIEW_ENDINGS = [
-  "I read it twice that evening and sent a copy to my sister.",
-  "It now sits inside the journal I return to every Sunday morning.",
-  "The recipient recognised the moment immediately and was genuinely touched.",
-  "I only needed one tiny correction, and the final result felt complete.",
-  "It made a thoughtful birthday gift and started a lovely family conversation.",
-  "The prayerful tone was comforting without ever becoming too formal.",
-  "I printed it for our mantel and still notice a new line each time I read it.",
-  "The pacing was calm, the imagery was lovely, and the message stayed clear.",
-  "It felt like a small keepsake made with patience rather than a rushed order.",
-  "The piece brought both tears and smiles, which was exactly what I had hoped for.",
-  "I would happily request another story for a future family occasion.",
-  "The result felt intimate, polished, and easy to share with the people I love.",
-  "It has become a meaningful reminder of why that moment mattered so much to us."
+  "It has become the first thing friends notice when they see my workspace.",
+  "I’ve used it across my laptop and phone, and both versions look great.",
+  "It makes my screen feel more personal without getting in the way.",
+  "The colors still look lovely in different lighting throughout the day.",
+  "I keep coming back to this design whenever I want a change of scene.",
+  "It was easy to download and set as my background.",
+  "The quality is lovely, even on my larger display.",
+  "I’d happily explore more designs from this collection."
 ];
 
 const REVIEW_TYPES = [
-  "Personal story", "Faith-based writing", "Motivational piece", "Family keepsake",
-  "Birthday story", "Prayer writing", "Anniversary gift", "Memory tribute"
+  "Desktop wallpaper", "Mac wallpaper", "iPhone wallpaper", "Home screen",
+  "Workspace setup", "Nature wallpaper", "Landscape design", "Digital download"
 ];
 
 const REVIEW_RATINGS = [
@@ -366,23 +449,14 @@ const EAST_ASIAN_REVIEWS = EAST_ASIAN_REVIEWER_NAMES.map((reviewer, index) => {
 });
 
 const REVIEWS = [...WESTERN_REVIEWS, ...EAST_ASIAN_REVIEWS];
-
-const ADMIN_EMAIL = "jaymrin01@gmail.com";
-const supabaseConfig = window.SEED_GARDEN_SUPABASE;
-const supabaseClient = window.supabase && supabaseConfig
-  ? window.supabase.createClient(supabaseConfig.url, supabaseConfig.anonKey, {
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
-    })
-  : null;
+const SHUFFLED_REVIEWS = [...REVIEWS];
+for (let index = SHUFFLED_REVIEWS.length - 1; index > 0; index -= 1) {
+  const swapIndex = Math.floor(Math.random() * (index + 1));
+  [SHUFFLED_REVIEWS[index], SHUFFLED_REVIEWS[swapIndex]] = [SHUFFLED_REVIEWS[swapIndex], SHUFFLED_REVIEWS[index]];
+}
 
 const state = {
-  calendarCursor: new Date(new Date().getFullYear(), new Date().getMonth(), 1),
-  selectedDate: null,
-  lastFocusedElement: null,
-  reportReturnFocus: null,
-  activeOrderId: null,
-  reviewsShown: 12,
-  orders: []
+  reviewsShown: 12
 };
 
 function escapeHtml(value) {
@@ -401,17 +475,21 @@ function renderReviews() {
   const summary = document.querySelector(".rating-summary");
 
   document.querySelector("#review-average").textContent = average;
-  document.querySelector("#review-count").textContent = `Based on ${REVIEWS.length} unique reader reviews`;
+  document.querySelector("#review-count").textContent = `Customer feedback from ${REVIEWS.length} reviews`;
   summary.setAttribute("aria-label", `Average rating ${average} out of 5`);
-  const visibleReviews = REVIEWS.slice(0, state.reviewsShown);
+  const visibleReviews = SHUFFLED_REVIEWS.slice(0, state.reviewsShown);
   list.innerHTML = visibleReviews.map((review, index) => {
     const initials = review.name.split(" ").map((part) => part[0]).join("");
+    const maskedName = review.name.split(" ").map((part) => {
+      const letters = Array.from(part);
+      return letters.length > 2 ? `${letters[0]}${"*".repeat(letters.length - 2)}${letters.at(-1)}` : part;
+    }).join(" ");
     return `
       <article class="review-card${index === 0 ? " active-review" : ""}">
         <div class="review-head">
           <div class="avatar" aria-hidden="true">${escapeHtml(initials)}</div>
           <div>
-            <strong>${escapeHtml(review.name)}</strong>
+            <strong>${escapeHtml(maskedName)}</strong>
             <span>${escapeHtml(review.type)} • ${escapeHtml(review.country)}</span>
           </div>
           <span class="mini-stars" aria-label="${review.rating.toFixed(1)} out of 5 stars">★ ${review.rating.toFixed(1)}</span>
@@ -470,59 +548,41 @@ function configureMobileNavigation() {
 
 function renderLibrary() {
   const catalog = document.querySelector("#library-catalog");
-  const categories = ["Stories", "Writings & Documentaries", "Faith-Based Stories"];
-
-  catalog.innerHTML = categories.map((category) => {
-    const books = BOOKS.filter((book) => book.category === category);
-    const cards = books.map((book, index) => {
-      const tone = (BOOKS.indexOf(book) + index) % 7;
-      const frontCover = book.cover
-        ? `<span class="book-face book-cover image-cover"><img src="${escapeHtml(book.cover)}" alt="" loading="lazy" decoding="async" /></span>`
-        : `<span class="book-face book-cover tone-${tone}">
-            <span class="book-mark" aria-hidden="true">${book.icon}</span>
-            <h4>${escapeHtml(book.title)}</h4>
-            <small>${escapeHtml(category)}</small>
-          </span>`;
-      return `
-        <article class="book-item">
-          <button class="flip-book" type="button" aria-pressed="false" aria-label="Flip ${escapeHtml(book.title)} to read the story">
-            <span class="book-card-inner">
-              ${frontCover}
-              <span class="book-face book-back-cover">
-                <h4>${escapeHtml(book.title)}</h4>
-                <p>${escapeHtml(book.story)}</p>
-                <small>Tap to return to the cover</small>
-              </span>
-            </span>
-          </button>
-          <div class="book-meta">
-            <h4>${escapeHtml(book.title)}</h4>
-            <p>${escapeHtml(book.description)}</p>
-            <div class="book-rating">
-              <strong>★ ${book.rating.toFixed(1)}</strong>
-              <span>${book.readers.toLocaleString()} readers</span>
-            </div>
-          </div>
-        </article>`;
-    }).join("");
-
-    return `
-      <section class="library-group" aria-labelledby="${category.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-")}">
-        <div class="library-group-title">
-          <h3 id="${category.toLowerCase().replaceAll(/[^a-z0-9]+/g, "-")}">${escapeHtml(category)}</h3>
-          <span class="library-count">${books.length} books</span>
+  const collections = [...WALLPAPER_COLLECTIONS];
+  for (let index = collections.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [collections[index], collections[swapIndex]] = [collections[swapIndex], collections[index]];
+  }
+  catalog.innerHTML = `<section class="library-group" aria-labelledby="wallpaper-collections">
+    <div class="library-group-title">
+      <h3 id="wallpaper-collections">Explore the collections</h3>
+      <span class="library-count">${collections.length} collections</span>
+    </div>
+    <div class="wallpaper-list">${collections.map((collection) => `
+      <article class="wallpaper-item">
+        <button class="wallpaper-open" type="button" aria-label="View ${escapeHtml(collection.title)} wallpaper">
+          <img class="wallpaper-preview" src="${escapeHtml(collection.image)}" alt="${escapeHtml(collection.title)} wallpaper artwork" loading="lazy" decoding="async" />
+        </button>
+        <div class="wallpaper-meta">
+          <h4>${escapeHtml(collection.title)}</h4>
+          <p>${escapeHtml(collection.description)}</p>
+          <div class="wallpaper-formats">${collection.variants.map((variant, index) => `<a href="${escapeHtml(collection.files[index])}" download>${escapeHtml(variant)}</a>`).join("")}</div>
         </div>
-        <div class="book-list">${cards}</div>
-      </section>`;
-  }).join("");
+      </article>`).join("")}</div>
+  </section>`;
 
   catalog.addEventListener("click", (event) => {
-    const book = event.target.closest(".flip-book");
-    if (!book) return;
-    const flipped = book.classList.toggle("is-flipped");
-    const title = book.closest(".book-item")?.querySelector(".book-meta h4")?.textContent || "book";
-    book.setAttribute("aria-pressed", String(flipped));
-    book.setAttribute("aria-label", flipped ? "Return to the book cover" : `Flip ${title} to read the story`);
+    const trigger = event.target.closest(".wallpaper-open");
+    if (!trigger) return;
+    const item = trigger.closest(".wallpaper-item");
+    const title = item.querySelector(".wallpaper-meta h4").textContent;
+    const image = trigger.querySelector("img");
+    const dialog = document.querySelector("#wallpaper-dialog");
+    dialog.dataset.collection = title;
+    dialog.querySelector(".wallpaper-dialog-title").textContent = title;
+    dialog.querySelector(".wallpaper-dialog-image").src = image.src;
+    dialog.querySelector(".wallpaper-dialog-image").alt = image.alt;
+    dialog.showModal();
   });
 }
 
@@ -535,599 +595,18 @@ function setChoice(button, selector, input) {
   document.querySelector(input).value = button.dataset.value;
 }
 
-function clearError(field) {
-  const error = document.querySelector(`[data-error-for="${field}"]`);
-  if (error) error.textContent = "";
-}
-
-function showError(field, message) {
-  const error = document.querySelector(`[data-error-for="${field}"]`);
-  if (error) error.textContent = message;
-}
-
 function configureOrderForm() {
-  const form = document.querySelector("#payment-form");
-  const customWrap = document.querySelector("#custom-pages-wrap");
-  const customInput = document.querySelector("#custom-pages");
-
   document.querySelectorAll(".type-choice").forEach((button) => {
-    button.addEventListener("click", () => setChoice(button, ".type-choice", "#story-type"));
-  });
-
-  document.querySelectorAll(".page-choice").forEach((button) => {
     button.addEventListener("click", () => {
-      setChoice(button, ".page-choice", "#page-length");
-      const isCustom = button.dataset.value === "Custom";
-      customWrap.hidden = !isCustom;
-      customInput.required = isCustom;
-      clearError("pages");
-      if (isCustom) customInput.focus();
+      setChoice(button, ".type-choice", "#story-type");
+      const collectionItem = [...document.querySelectorAll(".wallpaper-item")]
+        .find((item) => item.querySelector(".wallpaper-meta h4")?.textContent === button.dataset.value);
+      if (collectionItem) {
+        collectionItem.parentElement.prepend(collectionItem);
+        document.querySelector("#writing").scrollTop = 0;
+      }
     });
   });
-
-  document.querySelectorAll(".amount-choice").forEach((button) => {
-    button.addEventListener("click", () => {
-      setChoice(button, ".amount-choice", "#amount");
-      document.querySelector("#seed-count").value = button.dataset.seeds;
-    });
-  });
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    ["name", "email", "request", "pages"].forEach(clearError);
-
-    const name = document.querySelector("#name").value.trim();
-    const email = document.querySelector("#email").value.trim();
-    const request = document.querySelector("#request").value.trim();
-    const storyType = document.querySelector("#story-type").value;
-    let pageLength = document.querySelector("#page-length").value;
-    const amount = Number(document.querySelector("#amount").value);
-    const seedCount = Number(document.querySelector("#seed-count").value);
-    let valid = true;
-
-    if (!name) {
-      showError("name", "Please enter your name.");
-      valid = false;
-    }
-    if (!/^\S+@\S+\.\S+$/.test(email)) {
-      showError("email", "Please enter a valid email address.");
-      valid = false;
-    }
-    if (!request) {
-      showError("request", "Please share a few details for your request.");
-      valid = false;
-    }
-    if (pageLength === "Custom") {
-      const pages = Number(customInput.value);
-      if (!Number.isInteger(pages) || pages < 1 || pages > 100) {
-        showError("pages", "Enter a page count from 1 to 100.");
-        valid = false;
-      } else {
-        pageLength = `${pages} custom page${pages === 1 ? "" : "s"}`;
-      }
-    }
-
-    if (!valid) {
-      const firstError = form.querySelector(".error:not(:empty)");
-      firstError?.closest(".field-group, .choice-section")?.querySelector("input, textarea, button")?.focus();
-      return;
-    }
-
-    const now = new Date();
-    const order = {
-      id: createOrderId(now),
-      createdAt: now.toISOString(),
-      storyType,
-      pageLength,
-      name,
-      email,
-      request,
-      amount,
-      seedCount,
-      status: "pending"
-    };
-
-    const message = document.querySelector("#form-message");
-    const submitButton = form.querySelector(".pay-button");
-    submitButton.disabled = true;
-    submitButton.setAttribute("aria-busy", "true");
-    message.className = "form-message success";
-    message.textContent = "Saving your request…";
-
-    try {
-      await createOrder(order);
-      message.className = "form-message success";
-      message.textContent = `Request ${order.id} has been received. Thank you, ${name}!`;
-      form.reset();
-      resetChoices();
-
-      if (!document.querySelector("#admin-dashboard").hidden) {
-        await renderAdmin();
-      }
-    } catch (error) {
-      console.error("Unable to create order", error);
-      message.className = "form-message error-state";
-      message.textContent = "We could not save your request. Please try again in a moment.";
-    } finally {
-      submitButton.disabled = false;
-      submitButton.removeAttribute("aria-busy");
-    }
-  });
-}
-
-function resetChoices() {
-  const type = document.querySelector('.type-choice[data-value="Personal Request"]');
-  const pages = document.querySelector('.page-choice[data-value="1–3 pages (Short)"]');
-  const amount = document.querySelector('.amount-choice[data-value="14"]');
-  setChoice(type, ".type-choice", "#story-type");
-  setChoice(pages, ".page-choice", "#page-length");
-  setChoice(amount, ".amount-choice", "#amount");
-  document.querySelector("#seed-count").value = "2";
-  document.querySelector("#custom-pages-wrap").hidden = true;
-  document.querySelector("#custom-pages").required = false;
-}
-
-function createOrderId(date) {
-  const stamp = [date.getFullYear(), String(date.getMonth() + 1).padStart(2, "0"), String(date.getDate()).padStart(2, "0")].join("");
-  const random = Math.random().toString(36).slice(2, 6).toUpperCase();
-  return `SG-${stamp}-${random}`;
-}
-
-function requireSupabase() {
-  if (!supabaseClient) throw new Error("Supabase is not configured.");
-  return supabaseClient;
-}
-
-async function createOrder(order) {
-  const client = requireSupabase();
-  const { error } = await client.from("orders").insert({
-    id: order.id,
-    story_type: order.storyType,
-    page_length: order.pageLength,
-    customer_name: order.name,
-    customer_email: order.email,
-    request: order.request,
-    amount: order.amount,
-    seed_count: order.seedCount
-  });
-
-  if (error) throw error;
-}
-
-function mapOrder(row) {
-  return {
-    id: row.id,
-    createdAt: row.created_at,
-    storyType: row.story_type,
-    pageLength: row.page_length,
-    name: row.customer_name,
-    email: row.customer_email,
-    request: row.request,
-    amount: Number(row.amount),
-    seedCount: Number(row.seed_count),
-    status: row.status,
-    fulfilledAt: row.fulfilled_at
-  };
-}
-
-async function loadOrders() {
-  const client = requireSupabase();
-  const { data, error } = await client
-    .from("orders")
-    .select("id, created_at, story_type, page_length, customer_name, customer_email, request, amount, seed_count, status, fulfilled_at")
-    .order("created_at", { ascending: false });
-
-  if (error) throw error;
-  state.orders = (data || []).map(mapOrder);
-  return state.orders;
-}
-
-async function fulfillOrder(orderId) {
-  const client = requireSupabase();
-  const { error } = await client
-    .from("orders")
-    .update({ status: "fulfilled", fulfilled_at: new Date().toISOString() })
-    .eq("id", orderId);
-
-  if (error) throw error;
-}
-
-async function handleFulfillment(button) {
-  if (!button || button.disabled) return;
-  const orderId = button.dataset.orderId;
-  button.disabled = true;
-  button.textContent = "Updating…";
-
-  try {
-    await fulfillOrder(orderId);
-    await renderAdmin();
-    if (state.activeOrderId === orderId) renderOrderReport(orderId);
-  } catch (error) {
-    console.error("Unable to fulfill order", error);
-    button.disabled = false;
-    button.textContent = "Try again";
-    document.querySelector("#orders-filter").textContent = "The order could not be updated. Please try again.";
-  }
-}
-
-function configureAdminPortal() {
-  const portal = document.querySelector("#admin-portal");
-  const loginForm = document.querySelector("#admin-login-form");
-
-  document.querySelector("#admin-open").addEventListener("click", openAdmin);
-  document.querySelectorAll("[data-admin-close]").forEach((button) => button.addEventListener("click", closeAdmin));
-
-  loginForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const email = document.querySelector("#admin-email").value.trim().toLowerCase();
-    const password = document.querySelector("#admin-password").value;
-    const error = document.querySelector("#admin-login-error");
-    const loginButton = loginForm.querySelector(".admin-login-button");
-    error.textContent = "";
-    loginButton.disabled = true;
-    loginButton.textContent = "Signing in…";
-
-    try {
-      const client = requireSupabase();
-      const { data, error: authError } = await client.auth.signInWithPassword({ email, password });
-
-      if (authError) throw authError;
-      if (data.user?.email?.toLowerCase() !== ADMIN_EMAIL) {
-        await client.auth.signOut();
-        error.textContent = "This account does not have admin access.";
-        return;
-      }
-
-      loginForm.reset();
-      await showDashboard();
-    } catch (authError) {
-      console.error("Admin sign-in failed", authError);
-      error.textContent = "The email or password is incorrect, or the backend is unavailable.";
-    } finally {
-      loginButton.disabled = false;
-      loginButton.textContent = "Open dashboard";
-    }
-  });
-
-  document.querySelector("#admin-signout").addEventListener("click", async () => {
-    if (supabaseClient) await supabaseClient.auth.signOut();
-    state.orders = [];
-    showLogin();
-  });
-
-  document.querySelector("#calendar-prev").addEventListener("click", () => {
-    state.calendarCursor = new Date(state.calendarCursor.getFullYear(), state.calendarCursor.getMonth() - 1, 1);
-    renderCalendar();
-  });
-
-  document.querySelector("#calendar-next").addEventListener("click", () => {
-    state.calendarCursor = new Date(state.calendarCursor.getFullYear(), state.calendarCursor.getMonth() + 1, 1);
-    renderCalendar();
-  });
-
-  document.querySelector("#calendar-clear").addEventListener("click", () => {
-    state.selectedDate = null;
-    renderAdmin();
-  });
-
-  document.querySelector("#calendar-grid").addEventListener("click", (event) => {
-    const day = event.target.closest(".calendar-day");
-    if (!day) return;
-    state.selectedDate = day.dataset.date;
-    renderAdmin();
-  });
-
-  document.querySelector("#orders-list").addEventListener("click", async (event) => {
-    const detailButton = event.target.closest(".order-detail-button");
-    if (detailButton) {
-      openOrderReport(detailButton.dataset.orderId, detailButton);
-      return;
-    }
-
-    await handleFulfillment(event.target.closest(".fulfill-button"));
-  });
-
-  document.querySelector("#order-report-back").addEventListener("click", closeOrderReport);
-  document.querySelector("#order-report-print").addEventListener("click", () => {
-    document.body.classList.add("printing-order-report");
-    window.print();
-  });
-  window.addEventListener("afterprint", () => document.body.classList.remove("printing-order-report"));
-  document.querySelector("#order-report-fulfill").addEventListener("click", async (event) => {
-    await handleFulfillment(event.currentTarget);
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape" || portal.hidden) return;
-    if (!document.querySelector("#order-report").hidden) {
-      closeOrderReport();
-      return;
-    }
-    closeAdmin();
-  });
-}
-
-async function openAdmin() {
-  state.lastFocusedElement = document.activeElement;
-  document.querySelector("#admin-portal").hidden = false;
-
-  try {
-    const { data } = supabaseClient
-      ? await supabaseClient.auth.getSession()
-      : { data: { session: null } };
-    const authorized = data.session?.user?.email?.toLowerCase() === ADMIN_EMAIL;
-    if (authorized) {
-      await showDashboard();
-      return;
-    }
-  } catch (error) {
-    console.error("Unable to restore admin session", error);
-  }
-
-  showLogin();
-}
-
-function closeAdmin() {
-  closeOrderReport(false);
-  document.querySelector("#admin-portal").hidden = true;
-  state.lastFocusedElement?.focus();
-}
-
-function showLogin() {
-  closeOrderReport(false);
-  document.querySelector("#admin-login").hidden = false;
-  document.querySelector("#admin-dashboard").hidden = true;
-  requestAnimationFrame(() => document.querySelector("#admin-email").focus());
-}
-
-async function showDashboard() {
-  document.querySelector("#admin-login").hidden = true;
-  document.querySelector("#admin-dashboard").hidden = false;
-  await renderAdmin();
-  requestAnimationFrame(() => document.querySelector("#admin-signout").focus());
-}
-
-function localDateKey(isoDate) {
-  const date = new Date(isoDate);
-  return [date.getFullYear(), String(date.getMonth() + 1).padStart(2, "0"), String(date.getDate()).padStart(2, "0")].join("-");
-}
-
-async function renderAdmin() {
-  if (document.querySelector("#admin-dashboard").hidden) return;
-  const list = document.querySelector("#orders-list");
-  list.innerHTML = '<div class="empty-orders"><span aria-hidden="true">🌱</span><strong>Loading orders…</strong><p>Connecting to the Seed Garden Writings backend.</p></div>';
-
-  let orders;
-  try {
-    orders = await loadOrders();
-  } catch (error) {
-    console.error("Unable to load orders", error);
-    state.orders = [];
-    document.querySelector("#order-count").textContent = "0";
-    document.querySelector("#pending-count").textContent = "0";
-    document.querySelector("#fulfilled-count").textContent = "0";
-    renderCalendar();
-    document.querySelector("#orders-filter").textContent = "Unable to connect to the order database.";
-    list.innerHTML = '<div class="empty-orders"><span aria-hidden="true">⚠️</span><strong>Orders are unavailable</strong><p>Check the Supabase connection and database setup.</p></div>';
-    return;
-  }
-
-  document.querySelector("#order-count").textContent = orders.length;
-  document.querySelector("#pending-count").textContent = orders.filter((order) => order.status !== "fulfilled").length;
-  document.querySelector("#fulfilled-count").textContent = orders.filter((order) => order.status === "fulfilled").length;
-  renderCalendar();
-  renderOrders(orders);
-}
-
-function renderCalendar() {
-  const grid = document.querySelector("#calendar-grid");
-  const year = state.calendarCursor.getFullYear();
-  const month = state.calendarCursor.getMonth();
-  const firstDay = new Date(year, month, 1).getDay();
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const orderDates = new Set(state.orders.map((order) => localDateKey(order.createdAt)));
-  const today = localDateKey(new Date().toISOString());
-
-  document.querySelector("#calendar-title").textContent = state.calendarCursor.toLocaleDateString(undefined, { month: "long", year: "numeric" });
-  grid.replaceChildren();
-
-  for (let index = 0; index < firstDay; index += 1) {
-    const spacer = document.createElement("span");
-    spacer.className = "calendar-spacer";
-    grid.append(spacer);
-  }
-
-  for (let dayNumber = 1; dayNumber <= daysInMonth; dayNumber += 1) {
-    const dateKey = `${year}-${String(month + 1).padStart(2, "0")}-${String(dayNumber).padStart(2, "0")}`;
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "calendar-day";
-    button.dataset.date = dateKey;
-    button.textContent = dayNumber;
-    button.setAttribute("aria-label", new Date(year, month, dayNumber).toLocaleDateString(undefined, { dateStyle: "long" }));
-    button.classList.toggle("has-orders", orderDates.has(dateKey));
-    button.classList.toggle("is-today", dateKey === today);
-    button.classList.toggle("is-selected", dateKey === state.selectedDate);
-    grid.append(button);
-  }
-
-  document.querySelector("#calendar-clear").hidden = !state.selectedDate;
-}
-
-function renderOrders(allOrders) {
-  const list = document.querySelector("#orders-list");
-  const filtered = state.selectedDate
-    ? allOrders.filter((order) => localDateKey(order.createdAt) === state.selectedDate)
-    : allOrders;
-  const orders = [...filtered].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-  const filterLabel = document.querySelector("#orders-filter");
-
-  filterLabel.textContent = state.selectedDate
-    ? `Orders placed on ${new Date(`${state.selectedDate}T12:00:00`).toLocaleDateString(undefined, { dateStyle: "long" })}`
-    : "Showing all orders";
-
-  if (!orders.length) {
-    list.innerHTML = `<div class="empty-orders"><span aria-hidden="true">🗂️</span><strong>No orders here yet</strong><p>${state.selectedDate ? "Choose another date or show all orders." : "New customer requests will appear here."}</p></div>`;
-    return;
-  }
-
-  list.replaceChildren(...orders.map(createOrderCard));
-}
-
-function createOrderCard(order) {
-  const card = document.createElement("article");
-  const fulfilled = order.status === "fulfilled";
-  card.className = `order-card${fulfilled ? " is-fulfilled" : ""}`;
-
-  const header = document.createElement("div");
-  header.className = "order-card-head";
-  const identity = document.createElement("div");
-  const id = document.createElement("strong");
-  id.textContent = order.id;
-  const time = document.createElement("time");
-  time.dateTime = order.createdAt;
-  time.textContent = new Date(order.createdAt).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
-  identity.append(id, time);
-  const status = document.createElement("span");
-  status.className = `status-pill${fulfilled ? " fulfilled" : ""}`;
-  status.textContent = fulfilled ? "Fulfilled" : "Pending";
-  header.append(identity, status);
-
-  const details = document.createElement("div");
-  details.className = "order-details";
-  [
-    ["Name", order.name],
-    ["Email", order.email],
-    ["Type", order.storyType],
-    ["Pages", order.pageLength],
-    ["Seeds", `${order.seedCount || Math.max(1, Number(order.amount) / 7)} seed${(order.seedCount || Number(order.amount) / 7) === 1 ? "" : "s"}`],
-    ["Amount", `$${order.amount}`],
-    ["Request", order.request, true]
-  ].forEach(([label, value, full]) => {
-    const detail = document.createElement("div");
-    detail.className = `order-detail${full ? " full" : ""}`;
-    const small = document.createElement("small");
-    small.textContent = label;
-    const content = document.createElement("span");
-    content.textContent = value;
-    detail.append(small, content);
-    details.append(detail);
-  });
-
-  const actions = document.createElement("div");
-  actions.className = "order-card-actions";
-
-  const detailButton = document.createElement("button");
-  detailButton.type = "button";
-  detailButton.className = "order-detail-button";
-  detailButton.dataset.orderId = order.id;
-  detailButton.textContent = "Order details";
-
-  const fulfillButton = document.createElement("button");
-  fulfillButton.type = "button";
-  fulfillButton.className = "fulfill-button";
-  fulfillButton.dataset.orderId = order.id;
-  fulfillButton.disabled = fulfilled;
-  fulfillButton.textContent = fulfilled ? "✓ Order fulfilled" : "Mark as fulfilled";
-
-  actions.append(detailButton, fulfillButton);
-  card.append(header, details, actions);
-  return card;
-}
-
-function reportDate(isoDate) {
-  if (!isoDate) return "Not yet fulfilled";
-  return new Date(isoDate).toLocaleString(undefined, { dateStyle: "medium", timeStyle: "short" });
-}
-
-function renderOrderReport(orderId) {
-  const order = state.orders.find((item) => item.id === orderId);
-  if (!order) {
-    closeOrderReport(false);
-    return;
-  }
-
-  const fulfilled = order.status === "fulfilled";
-  const seedCount = order.seedCount || Math.max(1, Number(order.amount) / 7);
-  const statusLabel = fulfilled ? "Fulfilled" : "Pending";
-  const fulfillmentCopy = fulfilled
-    ? "This personalized writing order has been marked as fulfilled."
-    : "This personalized writing order is awaiting fulfillment.";
-  const content = document.querySelector("#order-report-content");
-  content.innerHTML = `
-    <header class="report-header">
-      <a class="report-brand" href="index.html" aria-label="Seed Garden Writings home">
-        <span class="report-brand-mark" aria-hidden="true">🌱</span>
-        <span><strong>Seed Garden Writings</strong><small>Personalized writings</small></span>
-      </a>
-      <div class="report-heading"><span>Custom Digital Order</span><h2 id="order-report-title">ORDER REPORT</h2></div>
-    </header>
-    <section class="report-hero">
-      <div><span class="report-eyebrow">Order confirmation</span><h3>Your Writing Order</h3><p>A clear record of the personalized writing request and its fulfillment.</p></div>
-      <span class="report-status${fulfilled ? " fulfilled" : ""}">${statusLabel}</span>
-    </section>
-    <section class="report-section">
-      <h4>Order summary</h4>
-      <div class="report-card report-summary">
-        <div><small>Order date</small><span>${escapeHtml(reportDate(order.createdAt))}</span></div>
-        <div><small>Order ID</small><strong>${escapeHtml(order.id)}</strong></div>
-        <div><small>Amount</small><strong>$${escapeHtml(order.amount)} USD</strong></div>
-        <div><small>Status</small><span class="report-status${fulfilled ? " fulfilled" : ""}">${statusLabel}</span></div>
-      </div>
-    </section>
-    <section class="report-section">
-      <h4>Customer</h4>
-      <div class="report-card report-columns">
-        <div><small>Name</small><strong>${escapeHtml(order.name)}</strong></div>
-        <div><small>Email</small><span>${escapeHtml(order.email)}</span></div>
-      </div>
-    </section>
-    <section class="report-section">
-      <h4>Ordered writing</h4>
-      <div class="report-card report-writing">
-        <div><small>Story type</small><strong>${escapeHtml(order.storyType)}</strong></div>
-        <div><small>Pages</small><span>${escapeHtml(order.pageLength)}</span></div>
-        <div><small>Seeds</small><span>${escapeHtml(seedCount)} seed${seedCount === 1 ? "" : "s"}</span></div>
-      </div>
-    </section>
-    <section class="report-section">
-      <h4>Personalized writing request</h4>
-      <blockquote class="report-card report-request">${escapeHtml(order.request)}</blockquote>
-    </section>
-    <section class="report-section">
-      <h4>Fulfillment</h4>
-      <div class="report-card report-fulfillment">
-        <div><small>Fulfillment status</small><strong>${statusLabel}</strong><p>${fulfillmentCopy}</p></div>
-        <div><small>Fulfilled on</small><strong>${escapeHtml(reportDate(order.fulfilledAt))}</strong></div>
-      </div>
-    </section>
-    <footer class="report-footer"><span>© ${new Date().getFullYear()} Seed Garden Writings</span><span>Custom Order Record</span><span>Stories · Faith · Inspiration</span></footer>
-  `;
-
-  const fulfillButton = document.querySelector("#order-report-fulfill");
-  fulfillButton.dataset.orderId = order.id;
-  fulfillButton.disabled = fulfilled;
-  fulfillButton.textContent = fulfilled ? "✓ Order fulfilled" : "Mark as fulfilled";
-}
-
-function openOrderReport(orderId, trigger) {
-  state.activeOrderId = orderId;
-  state.reportReturnFocus = trigger || document.activeElement;
-  renderOrderReport(orderId);
-  const report = document.querySelector("#order-report");
-  report.hidden = false;
-  report.scrollTop = 0;
-  document.querySelector("#order-report-back").focus();
-}
-
-function closeOrderReport(restoreFocus = true) {
-  const report = document.querySelector("#order-report");
-  if (!report || report.hidden) return;
-  report.hidden = true;
-  document.body.classList.remove("printing-order-report");
-  state.activeOrderId = null;
-  if (restoreFocus) state.reportReturnFocus?.focus();
-  state.reportReturnFocus = null;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1139,6 +618,17 @@ document.addEventListener("DOMContentLoaded", () => {
   renderLibrary();
   configureMobileNavigation();
   configureOrderForm();
-  configureAdminPortal();
+  const wallpaperDialog = document.querySelector("#wallpaper-dialog");
+  wallpaperDialog.querySelector(".wallpaper-dialog-close").addEventListener("click", () => wallpaperDialog.close());
+  wallpaperDialog.querySelector(".wallpaper-get-button").addEventListener("click", () => {
+    const email = wallpaperDialog.querySelector("#wallpaper-email");
+    if (!email.reportValidity()) return;
+    window.alert("Your collection will be delivered via mail.");
+    wallpaperDialog.close();
+    email.value = "";
+  });
+  wallpaperDialog.addEventListener("click", (event) => {
+    if (event.target === wallpaperDialog) wallpaperDialog.close();
+  });
   document.querySelector("#year").textContent = new Date().getFullYear();
 });

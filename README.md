@@ -27,4 +27,4 @@ Then visit `http://localhost:8000`.
 
 ## Payment setup
 
-The shop button links to Buy Me a Coffee. Wallpaper previews include an email prompt and a delivery confirmation message; email delivery is not connected to a service yet.
+The shop button links to Buy Me a Coffee. Wallpaper previews include an email prompt and a delivery confirmation message; email delivery is not connected to a service yet. Reviews added through the review form are stored in that browser's local storage.

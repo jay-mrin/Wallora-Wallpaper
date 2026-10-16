@@ -394,7 +394,6 @@ const WESTERN_REVIEWS = Array.from({ length: 123 }, (_, index) => {
 
   return {
     name,
-    country: british ? "United Kingdom" : "United States",
     type: REVIEW_TYPES[index % REVIEW_TYPES.length],
     rating: REVIEW_RATINGS[(index * 37) % REVIEW_RATINGS.length],
     text: reviewText(index)
@@ -434,14 +433,14 @@ const EAST_ASIAN_REVIEW_RATINGS = [
 ];
 
 const EAST_ASIAN_REVIEWER_NAMES = [
-  ...CHINESE_REVIEWER_NAMES.map((name) => ({ name, country: "China" })),
-  ...JAPANESE_REVIEWER_NAMES.map((name) => ({ name, country: "Japan" }))
+  ...CHINESE_REVIEWER_NAMES,
+  ...JAPANESE_REVIEWER_NAMES
 ];
 
 const EAST_ASIAN_REVIEWS = EAST_ASIAN_REVIEWER_NAMES.map((reviewer, index) => {
   const globalIndex = WESTERN_REVIEWS.length + index;
   return {
-    ...reviewer,
+    name: reviewer,
     type: REVIEW_TYPES[globalIndex % REVIEW_TYPES.length],
     rating: EAST_ASIAN_REVIEW_RATINGS[(index * 17) % EAST_ASIAN_REVIEW_RATINGS.length],
     text: reviewText(globalIndex)
@@ -449,10 +448,28 @@ const EAST_ASIAN_REVIEWS = EAST_ASIAN_REVIEWER_NAMES.map((reviewer, index) => {
 });
 
 const REVIEWS = [...WESTERN_REVIEWS, ...EAST_ASIAN_REVIEWS];
-const SHUFFLED_REVIEWS = [...REVIEWS];
-for (let index = SHUFFLED_REVIEWS.length - 1; index > 0; index -= 1) {
-  const swapIndex = Math.floor(Math.random() * (index + 1));
-  [SHUFFLED_REVIEWS[index], SHUFFLED_REVIEWS[swapIndex]] = [SHUFFLED_REVIEWS[swapIndex], SHUFFLED_REVIEWS[index]];
+const SHUFFLED_REVIEWS = [];
+
+function shuffleReviews() {
+  SHUFFLED_REVIEWS.splice(0, SHUFFLED_REVIEWS.length, ...REVIEWS);
+  for (let index = SHUFFLED_REVIEWS.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [SHUFFLED_REVIEWS[index], SHUFFLED_REVIEWS[swapIndex]] = [SHUFFLED_REVIEWS[swapIndex], SHUFFLED_REVIEWS[index]];
+  }
+}
+
+function loadSavedReviews() {
+  try {
+    const saved = JSON.parse(localStorage.getItem("wallora-reviews") || "[]");
+    if (!Array.isArray(saved)) return;
+    saved.forEach((review) => {
+      if (review && typeof review.name === "string" && typeof review.type === "string" && typeof review.text === "string") {
+        REVIEWS.push({ name: review.name, type: review.type, text: review.text, rating: 5 });
+      }
+    });
+  } catch (error) {
+    console.warn("Saved reviews could not be loaded", error);
+  }
 }
 
 const state = {
@@ -490,7 +507,7 @@ function renderReviews() {
           <div class="avatar" aria-hidden="true">${escapeHtml(initials)}</div>
           <div>
             <strong>${escapeHtml(maskedName)}</strong>
-            <span>${escapeHtml(review.type)} • ${escapeHtml(review.country)}</span>
+            <span>${escapeHtml(review.type)}</span>
           </div>
           <span class="mini-stars" aria-label="${review.rating.toFixed(1)} out of 5 stars">★ ${review.rating.toFixed(1)}</span>
         </div>
@@ -610,6 +627,8 @@ function configureOrderForm() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  loadSavedReviews();
+  shuffleReviews();
   renderReviews();
   document.querySelector("#review-load-more").addEventListener("click", () => {
     state.reviewsShown = Math.min(state.reviewsShown + 12, REVIEWS.length);
@@ -629,6 +648,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   wallpaperDialog.addEventListener("click", (event) => {
     if (event.target === wallpaperDialog) wallpaperDialog.close();
+  });
+  const addReviewDialog = document.querySelector("#add-review-dialog");
+  const addReviewForm = document.querySelector("#add-review-form");
+  document.querySelector("#review-add-open").addEventListener("click", () => addReviewDialog.showModal());
+  addReviewDialog.querySelector(".wallpaper-dialog-close").addEventListener("click", () => addReviewDialog.close());
+  addReviewDialog.addEventListener("click", (event) => {
+    if (event.target === addReviewDialog) addReviewDialog.close();
+  });
+  addReviewForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!addReviewForm.reportValidity()) return;
+    const review = {
+      name: document.querySelector("#reviewer-name").value.trim(),
+      type: document.querySelector("#review-type").value,
+      text: document.querySelector("#review-comment").value.trim(),
+      rating: 5
+    };
+    if (!review.name || !review.text) return;
+    REVIEWS.push(review);
+    SHUFFLED_REVIEWS.unshift(review);
+    try {
+      const saved = JSON.parse(localStorage.getItem("wallora-reviews") || "[]");
+      saved.push({ name: review.name, type: review.type, text: review.text });
+      localStorage.setItem("wallora-reviews", JSON.stringify(saved));
+    } catch (error) {
+      console.warn("Review was added for this session but could not be saved", error);
+    }
+    state.reviewsShown = Math.max(state.reviewsShown, 12);
+    renderReviews();
+    addReviewForm.reset();
+    addReviewDialog.close();
   });
   document.querySelector("#year").textContent = new Date().getFullYear();
 });
